@@ -31,7 +31,7 @@ std::vector<int16_t> load_audio_buffer(const char * file_name)
     unsigned error = lodepng::decode(image, width, height, file_name);
     
 
-    if(!error&&width<=bandwidth)
+    if(!error&&width>=bandwidth)
     {
         std::vector<float> srcbuff;
         srcbuff.reserve(height*bandwidth);

@@ -51,7 +51,7 @@ public:
                 double t=curr_time;
                 for (int b=0; b<Scale; ++b) {
                     float amp=last_amp+amp_diff*float(b)/float(Scale-1);
-                    sum[b]+=amp*sin((freq*t-phase)/M_2_PI);
+                    sum[b]+=amp*sin((freq*t-phase)*M_2_PI);
                     t+=time_step;
                 }
                 oscilators[i].last_amp=next_amp;
